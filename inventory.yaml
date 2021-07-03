@@ -1,0 +1,21 @@
+all:
+  hosts:
+    10.0.0.7:
+  children:
+    util:
+        hosts:
+            10.0.0.2:
+            10.0.0.3:
+            10.0.0.4:
+    cluster:
+        hosts:
+            10.0.0.110:
+            10.0.0.111:
+            10.0.0.112:
+    cluster-master:
+            hosts:
+                10.0.0.110:
+    cluster-worker:
+            hosts:    
+                10.0.0.111:
+                10.0.0.112:

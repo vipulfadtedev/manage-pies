@@ -1,0 +1,12 @@
+---
+- name: Upgrade Pies...
+  hosts: "{{hosts}}"
+  remote_user: pi
+  become: true
+
+  tasks:
+  - name: apt upgrade
+    apt:
+        upgrade: full
+        update_cache: yes
+        cache_valid_time: 86400
