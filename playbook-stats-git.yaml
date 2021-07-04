@@ -12,3 +12,9 @@
         version: main
         clone: yes 
         update: yes
+  - name: cron
+    cron:
+        name: "collect-stats"
+        user: "root"
+        minute: "*/1"
+        job: "sh /home/pi/scripts/status-collector/script.sh"

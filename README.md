@@ -13,3 +13,10 @@ Currently it doest upgrade pies and can reboot em.
 
 2. Reboot<br>
     ```ansible-playbook -i inventory.yaml --extra-vars "hosts=all" playbook-reboot.yaml```
+
+4. Start collecting stats <br>
+    ```ansible-playbook -i inventory.yaml --extra-vars "hosts=all" playbook-stats-git.yaml```	
+	
+4. Rotate Logs<br>
+    ```ansible-playbook -i 10.0.0.4, playbook-rotate-logs-git.yaml```	
+	
