@@ -1,0 +1,14 @@
+---
+- name: Upgrade Pies...
+  hosts: "{{hosts}}"
+  remote_user: pi
+  become: true
+
+  tasks:
+  - name: clone or pull from git
+    git:
+        repo: https://github.com/vipulfadtedev/status-collector.git
+        dest: /home/pi/scripts/status-collector
+        version: main
+        clone: yes 
+        update: yes
