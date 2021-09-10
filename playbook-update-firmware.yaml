@@ -1,0 +1,9 @@
+---
+- name: Update Firmware Of Pies...
+  hosts: "{{hosts}}"
+  remote_user: pi
+  become: true
+
+  tasks:
+  - name: update firmware
+    ansible.builtin.shell: rpi-eeprom-update -a

@@ -10,3 +10,15 @@
         upgrade: full
         update_cache: yes
         cache_valid_time: 86400
+  
+  - name: apt autoremove
+    apt:
+        autoremove: yes
+  
+  - name: apt autoclean
+    apt:
+        autoclean: yes
+
+  - name: reboot
+    reboot:
+        post_reboot_delay: 30
